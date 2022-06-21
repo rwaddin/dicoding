@@ -1,9 +1,10 @@
-html{
-
-}
+* {
+    box-sizing: border-box;
+  }
 body{
     font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     margin:0;
+    padding: 0;
 }
 header{
     background-color: #9EB23B;
@@ -13,15 +14,41 @@ header{
         padding:1em;
     }
     nav{
+        text-align: center;
         background-color: #C7D36F;
+        padding: 5px;
+        position: sticky;
+        top: 0;
+        li{
+            display: inline;
+            list-style-type: none;
+            margin-right: 20px;
+        }
     }
 }
 
 main{
     display: flex;
     padding:0 1em;
-    div#content {
+    div#content{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
         width: 75%;
+        article{
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            border-radius: 1em;
+            margin: 2em 0;
+            width: 27%;
+            padding: 1em;
+            h1{
+                text-overflow: ellipsis;
+            }
+            img{
+
+                width: 100%;
+            }
+        }
     }
     aside {
         width: 25%;
@@ -31,6 +58,7 @@ main{
         }
         img{
             border-radius: 50px;
+            width: 100%;
         }
         p{
             padding:1em;
@@ -41,17 +69,18 @@ main{
             text-align: left;
         }
     }
-    article{
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        border-radius: 1em;
-        padding: 2em;
-        margin: 1em 0;
-        
-        img{
-            height: 20em;
+}
+
+#game{
+    div{
+        display: flex;
+        input{
+            height: 20px;
+            width: 25%;
+            justify-content: space-around;
         }
-        .gambar{
-            text-align: center;
+        button{
+            height: 28px;
         }
     }
 }
@@ -68,6 +97,16 @@ footer {
  a.btn{
     background-color: #BABD42;
     color: #fff;
-    padding: 10px;
+    padding: 5px 10px;
     text-decoration: none;
+    float: right;
+    border-radius: 9px;
 }
+
+@media screen and (max-width: 1000px) {
+    #content,
+    aside {
+      width: 100%;
+      padding: 0;
+    }
+  }

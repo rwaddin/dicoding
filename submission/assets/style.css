@@ -1,6 +1,12 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
   font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   margin: 0;
+  padding: 0;
 }
 
 header {
@@ -14,7 +20,18 @@ header div#judul {
 }
 
 header nav {
+  text-align: center;
   background-color: #C7D36F;
+  padding: 5px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+header nav li {
+  display: inline;
+  list-style-type: none;
+  margin-right: 20px;
 }
 
 main {
@@ -25,7 +42,31 @@ main {
 }
 
 main div#content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   width: 75%;
+}
+
+main div#content article {
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 1em;
+  margin: 2em 0;
+  width: 27%;
+  padding: 1em;
+}
+
+main div#content article h1 {
+  text-overflow: ellipsis;
+}
+
+main div#content article img {
+  width: 100%;
 }
 
 main aside {
@@ -39,6 +80,7 @@ main aside #profile {
 
 main aside img {
   border-radius: 50px;
+  width: 100%;
 }
 
 main aside p {
@@ -51,20 +93,21 @@ main aside #kat {
   text-align: left;
 }
 
-main article {
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 1em;
-  padding: 2em;
-  margin: 1em 0;
+#game div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-main article img {
-  height: 20em;
+#game div input {
+  height: 20px;
+  width: 25%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-main article .gambar {
-  text-align: center;
+#game div button {
+  height: 28px;
 }
 
 footer {
@@ -78,7 +121,17 @@ footer {
 a.btn {
   background-color: #BABD42;
   color: #fff;
-  padding: 10px;
+  padding: 5px 10px;
   text-decoration: none;
+  float: right;
+  border-radius: 9px;
+}
+
+@media screen and (max-width: 1000px) {
+  #content,
+  aside {
+    width: 100%;
+    padding: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */
