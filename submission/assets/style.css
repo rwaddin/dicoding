@@ -1,0 +1,84 @@
+body {
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  margin: 0;
+}
+
+header {
+  background-color: #9EB23B;
+}
+
+header div#judul {
+  text-align: center;
+  color: #fff;
+  padding: 1em;
+}
+
+header nav {
+  background-color: #C7D36F;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 1em;
+}
+
+main div#content {
+  width: 75%;
+}
+
+main aside {
+  width: 25%;
+  padding: 1em;
+}
+
+main aside #profile {
+  text-align: center;
+}
+
+main aside img {
+  border-radius: 50px;
+}
+
+main aside p {
+  padding: 1em;
+  text-align: center;
+  background-color: #D4D925;
+}
+
+main aside #kat {
+  text-align: left;
+}
+
+main article {
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 1em;
+  padding: 2em;
+  margin: 1em 0;
+}
+
+main article img {
+  height: 20em;
+}
+
+main article .gambar {
+  text-align: center;
+}
+
+footer {
+  padding: 1em 0;
+  color: white;
+  background-color: #9EB23B;
+  text-align: center;
+  font-weight: bold;
+}
+
+a.btn {
+  background-color: #BABD42;
+  color: #fff;
+  padding: 10px;
+  text-decoration: none;
+}
+/*# sourceMappingURL=style.css.map */
