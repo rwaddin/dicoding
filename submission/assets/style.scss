@@ -36,11 +36,12 @@ main{
         justify-content: space-around;
         width: 75%;
         article{
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 8px 0 rgba(158, 178, 59, 0.7);
             border-radius: 1em;
             margin: 2em 0;
             width: 27%;
             padding: 1em;
+            word-wrap: break-word;
             h1{
                 text-overflow: ellipsis;
             }
@@ -80,7 +81,7 @@ main{
             justify-content: space-around;
         }
         button{
-            height: 28px;
+            height: 1.5em;
         }
     }
 }
@@ -103,10 +104,16 @@ footer {
     border-radius: 9px;
 }
 
-@media screen and (max-width: 1000px) {
+@media only screen and (max-width: 578px) {
     #content,
-    aside {
-      width: 100%;
-      padding: 0;
+    article, aside{
+        width: 100% !important;
     }
-  }
+    main{
+        display: block
+    }
+    nav ul{
+        display: flex;
+        justify-content: space-around;
+    }
+}
